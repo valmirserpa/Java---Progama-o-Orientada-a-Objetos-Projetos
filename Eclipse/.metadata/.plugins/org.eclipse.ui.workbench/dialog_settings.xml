@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="PreferencesImportWizard">
+		<item key="" value="C:\Users\valmir.junior\OneDrive\Java\ConfiguraçõesEclipse.epf"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\valmir.junior\OneDrive\Java\ConfiguraçõesEclipse.epf"/>
+		</list>
+	</section>
+	<section name="PreferencesExportWizard">
+		<item key="" value="C:\Users\valmir.junior\OneDrive\Java\ConfiguraçõesEclipse.epf"/>
+		<item key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID" value="true"/>
+		<item key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID" value="false"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\valmir.junior\OneDrive\Java\ConfiguraçõesEclipse.epf"/>
+		</list>
+		<list key="WizardPreferencesExportPage1.TRANSFER_PREFERENCES_NAMES_ID">
+			<item value="org.eclipse.jdt.debug.ui.transfer.jres"/>
+			<item value="org.eclipse.jdt.internal.ui.transfer.codestyle"/>
+			<item value="org.eclipse.jdt.internal.core.transfer.compiler"/>
+			<item value="org.eclipse.ui.ide.transfer.keys"/>
+		</list>
+	</section>
+</section>

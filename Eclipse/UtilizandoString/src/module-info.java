@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author valmir
+ *
+ */
+module UtilizandoString {
+}

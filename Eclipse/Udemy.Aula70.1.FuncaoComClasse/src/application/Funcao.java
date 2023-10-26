@@ -1,0 +1,35 @@
+
+// Outra forma de resolver o mesmo problema, colocando as funções em uma classe e deixando o código mais limpo
+
+package application;
+
+import java.util.Scanner;
+
+import util.Calculator;
+
+public class Funcao {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		Calculator funcaoNaClasse = new Calculator();
+
+		int valor = 1;
+
+		while (valor != 0) {
+
+			System.out.println("Escreva um número:");
+			valor = scanner.nextInt();
+
+			System.out.printf("%.2f%n", funcaoNaClasse.calcularRaio(valor));
+			System.out.println(funcaoNaClasse.dobrarValor(valor));
+			System.out.println(funcaoNaClasse.condicional(valor));
+			System.out.println("===========================");
+
+		}
+
+		scanner.close();
+
+	}
+
+}

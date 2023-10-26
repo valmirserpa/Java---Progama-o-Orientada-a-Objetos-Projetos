@@ -1,0 +1,153 @@
+
+/*
+* Lista é uma estrutura de dados:
+• Homogênea (dados do mesmo tipo)
+• Ordenada (elementos acessados por meio de posições)
+• Inicia vazia, e seus elementos são alocados sob demanda
+• Cada elemento ocupa um "nó" (ou nodo) da lista
+
+Cada caixinha é chamada de nodo ou nó, ele vai conter o dado e um "ponteiro" apontado para o próximo nodo.
+Cada nodo conhece o seu valor e o do próximo, se trata de uma estrutura encadeada, onde cada nodo aponta
+para o próximo e assim por diante e no último nodo terá um valor para informar que se trata do último nodo
+da lista.
+
+No java, para a gente trabalhar com lista será o tipo "list", que na verdade não é uma classe e sim 
+uma interface
+
+Eu não posso instaciar o tipo lista, porque o tipo "list" é uma interface = List x = new List();-> errado
+
+E para instaciar um tipo list eu vou precisar de uma classe que implementa esta interface e elas são:
+ArrayList, LinkedList e etc.
+
+Vantagens: Tamanho variável, ela vai iniciar vazia, vamos removendo e adicionando conforme necessidade.
+Ou seja, as vantagens da lista são os pontos fracos de utilizar o vetor.
+
+
+Uma das desvantagens de se utilizar a lista é que os dados são sequência ou seja se eu tiver uma lista com 
+1000 posições e seu eu quiser acessar o dado na posição 500 eu vou precisar percorrer 499 posições para 
+acessar o dado na posição 500.
+
+Mas dependendo da implementação da lista esta navegação pode ser otimizada, no Java nós temos uma classe 
+chamada array list que é uma combinação de lista com vetor, neste caso para acessar um dado na posição 500
+não será necessário percorrer 499 posições até o dado
+
+
+
+
+*/
+
+package Program;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// DECLARANDO LISTA DE NÚMERO INTEIROS
+		List<String> lista = new ArrayList<>();
+
+		/*
+		 * List: tipo de lista <String>: tipo de dados da minha lista, só aceito as
+		 * wrappers class. 
+		 * 
+		 * lista: o nome da minha List
+		 * 
+		 * ArrayList: É uma classe que implementa uma interface, porque List é uma
+		 * interface, utilizamos o arraylista porque ela pega as melhores
+		 * características do vetor e da list
+		 * 
+		 * List não aceita tipos primitivos, devemos utilizar as wrappers class, o que
+		 * colocamos entre os <> é chamado de generics, quando podemos definir um tipo
+		 * informando um outro tipo específico que eu quiser,
+		 * 
+		 * Para utilizar as operações da lista, você precisa chamar a lista criada pelo
+		 * o seu nome seguido de (.)ponto, no nosso caso, lista.[****]
+		 * 
+		 */
+		
+		
+		//PARA ADICIONAR ITEM A MINHA LISTA
+		lista.add("Maria");
+		lista.add("Valmir");
+		lista.add("Mariana");
+		lista.add("Ana");
+
+		//PARA ADICIONAR EM UM POSIÇÃO ESPECÍFICA
+		lista.add(2, "Marco"); /* informa a posição da lista e depois o valor */
+
+		//VERIFICAR O TAMANHO DA MINHA LISTA
+		System.out.println(lista.size());
+		System.out.println("-----------------------");
+		
+		//REMOVER ITEM DA LISTA
+		lista.remove(2); // ou lista.remove("Marco");
+
+		//REMOVER A PARTIR DE UMA CONDIÇÃO, TODOS COM A LETRA M
+		lista.removeIf(x -> x.charAt(0) == 'T');
+		/*
+		 * Lê: Pega um valor x e me retorna se X na posição zero é igual a M Aqui estou
+		 * definindo um função lambda que se chama um predicado, porque nos dará uma
+		 * resposta de verdadeiro ou falso
+		 */
+
+		//MANTER DADOS COM COMECEM COM UMA DETERMINADA LETRAA
+		
+		List<String> lista2=lista.stream().filter(x->x.charAt(0)=='M').collect(Collectors.toList());
+		
+		for (String x : lista2) {
+			System.out.println(x);
+			System.out.println("-----------------------");
+		}
+		
+		
+		/*Neste caso será necessário declarar uma nova lista, do tipo string
+		 e fazer duas conversões:
+		 
+		 1- List<String> lista2: Precisamos criar uma nova lista;
+		 2- list2.stream(): Pegamos a nossa lista criada, convertermos para Stream; 
+		 3- .filter(x -> x.charAt(0) == 'M'): Chamamos a função filter que irá filtrar de acordo com o predicado/condição
+		 4- x -> x.charAt(0) == 'A': Condição
+		 5- .collect(Collectors.toList()):Como o stream, não é compatível com List, neste caso precisamos converter de volta para List
+		 * */
+		
+		//ENCONTRAR O PRIMEIRO ELEMENTO DA LISTA COM COMEÇA COM M		
+		/*Aula 98 minuto 16*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// ENCONRTAR A POSIÇÃO DOS DADOS 
+		lista.indexOf("Mariana");
+		System.out.println("Index of Mariana: " + lista.indexOf("Mariana"));
+		System.out.println("Index of Valmir: " + lista.indexOf("Valmir"));
+		System.out.println("Index of Maria: " + lista.indexOf("Maria"));
+		System.out.println("Index of Ana: " + lista.indexOf("Ana"));
+		System.out.println("Index of Matheus: " + lista.indexOf("Matheus")); // Quando não encontro, retorna -1
+		System.out.println("-----------------------");
+	
+		
+		System.out.println("Verificar se a minha lista está OK");
+		for (String z : lista) {
+			
+			System.out.println(z);
+
+			/*
+			 * Para verificar se a minha lista está ok, vou utilizar o for each e mandar
+			 * imprimir cada elemento da minha
+			 * 
+			 * Lê: Para string x pertecente a minha lista do tipo List, eu vou mandar
+			 * imprimir na tela o valor de x
+			 */
+		}
+		System.out.println("-----------------------");
+	}
+}

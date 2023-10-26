@@ -1,0 +1,23 @@
+package program;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		LocalDate dataLocal = LocalDate.now();
+		LocalDateTime dataeHoraLocal = LocalDateTime.now();		
+		Instant dataeHoraLocalLondes = Instant.now();
+		
+		System.out.println("Data local: " + dataLocal);
+		System.out.println("Data de horário local: " +dataeHoraLocal);
+		System.out.println("Data e horário de Londres1: " + dataeHoraLocalLondes);
+		
+		
+
+	}
+
+}

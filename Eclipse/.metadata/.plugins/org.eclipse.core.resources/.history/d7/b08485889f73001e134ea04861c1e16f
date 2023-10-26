@@ -1,0 +1,55 @@
+package program;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		
+		
+		
+		Instant textoHora2 = Instant.parse("2023-10-24T14:25:30Z");
+		
+		
+//================================================================================
+		
+		DateTimeFormatter formatarData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate textoHora = LocalDate.parse("2023-10-24");
+		System.out.println(textoHora.format(formatarData));
+		
+		     	/* Primeiro criamos o nosso formato customizado com DateTimeFormatter
+		     	 * 
+		     	 * Para definir como eu quero formatar a data, posso informar a função .format
+		     	 * e passar como parâmetro o objeto DateTimeFormatter*/
+		
+		
+		System.out.println(textoHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+		
+				/*Também é possível instaciar o objeto no momento de rodar a linha*/
+		
+		
+		System.out.println(formatarData.format(textoHora));
+		
+				/* Outra forma, chamar primeiro o formato customizado, depois a função .format e
+				 * passar como parâmetro a variárial;
+				 * 
+				 * */
+		
+//================================================================================
+		
+		DateTimeFormatter formatarData1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		LocalDateTime textoHora1 = LocalDateTime.parse("2023-10-24T14:25:30");
+		
+		System.out.println(textoHora1.format(formatarData1));
+		System.out.println(textoHora1.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+		System.out.println(formatarData1.format(textoHora1));
+		
+		
+		
+	}
+
+}

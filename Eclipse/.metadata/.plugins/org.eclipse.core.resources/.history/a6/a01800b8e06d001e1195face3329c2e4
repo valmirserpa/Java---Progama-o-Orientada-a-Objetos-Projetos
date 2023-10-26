@@ -1,0 +1,26 @@
+package pe.estudo.springboot.estruturadedecisao;
+
+import java.util.Scanner;
+
+public class condicao {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		int numero;
+
+		System.out.println("Digite um número");
+		numero = scanner.nextInt();
+
+		if (numero > 10) {
+			System.out.println("maior que 10");
+		} else {
+			System.out.println("menor que 10");
+		}
+
+		scanner.close();
+
+	}
+
+}

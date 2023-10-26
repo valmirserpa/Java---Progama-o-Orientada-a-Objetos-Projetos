@@ -1,0 +1,25 @@
+package criandoFuncao;
+import java.util.Scanner;
+public class Funcao {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int valor;
+		
+		System.out.println("Escreva um número:");
+	
+		
+		
+		
+		
+
+	}
+	
+	
+	
+	
+	
+
+}

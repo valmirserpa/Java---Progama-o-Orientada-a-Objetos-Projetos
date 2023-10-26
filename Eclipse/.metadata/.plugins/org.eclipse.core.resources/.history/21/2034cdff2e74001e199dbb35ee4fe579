@@ -1,0 +1,41 @@
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class Main {
+
+    public static void main(String[] args) {
+      
+        System.out.println("Calcular duração de tempo utilizando datas (LocalDate):");
+        LocalDate textoData = LocalDate.parse("2023-10-24");
+
+        LocalDate diminuirDataLocalDate = textoData.minusDays(7);
+        LocalDate aumentarDataLocalDate = textoData.plusDays(7);
+        LocalDate diminuirAnoLocalDate = textoData.minusYears(1);
+        LocalDate aumentarAnoLocalDate = textoData.plusYears(1);
+        
+        System.out.println("Texto original: " + textoData);
+        System.out.println("Diminuir 7 dias: " + diminuirDataLocalDate);
+        System.out.println("Aumentar 7 dias: " + aumentarDataLocalDate);
+        System.out.println("Diminuir 1 ano: " + diminuirAnoLocalDate);
+        System.out.println("Aumentar 1 ano: " + aumentarAnoLocalDate);
+        
+        System.out.println();
+        
+        System.out.println("Calcular duração de tempo utilizando datas com horas (LocalDateTime):");
+        LocalDateTime textoDataHora = LocalDateTime.parse("2023-10-24T14:25:30");
+        LocalDateTime diminuirDataLocalDateTime = textoDataHora.minusDays(7);
+        LocalDateTime aumentarDataLocalDateTime = textoDataHora.plusDays(7);
+        
+        Duration duracaoEntreDatas = Duration.between(diminuirDataLocalDateTime, aumentarDataLocalDateTime);
+        System.out.println(duracaoEntreDatas.toDays());
+        System.out.println(duracaoEntreDatas.toHours());
+        System.out.println(duracaoEntreDatas.toMinutes());
+        
+        /* Com LocalDateTime, para calcularmos duração entre datas com horas, precisamos utilizar a classe Duration.
+         * A classe Duration não pode ser usada para calcular a diferença entre datas completas (como LocalDate).
+         * Ela é mais adequada para calcular diferenças de tempo em termos de horas, minutos, segundos e nanossegundos. */
+        
+        System.out.println("No caso de datas no formato LocalDate, sem as horas, precisamos converter para LocalDateTime inserindo a função .atStartOfDay.");
+    }
+}

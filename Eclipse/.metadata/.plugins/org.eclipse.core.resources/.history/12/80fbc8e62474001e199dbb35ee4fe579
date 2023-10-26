@@ -1,0 +1,56 @@
+package Program;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		LocalDate textoData = LocalDate.parse("2023-10-24");
+		LocalDateTime textoDataHora = LocalDateTime.parse("2023-10-24T14:25:30");
+		Instant textoDataHoraFuso = Instant.parse("2023-10-24T01:25:30Z");
+		
+
+		LocalDate diminuirDataLocalDate = textoData.minusDays(7);
+		System.out.println(diminuirDataLocalDate);
+		
+		LocalDate aumetarDataLocalDate = textoData.plusDays(7);
+		System.out.println(aumetarDataLocalDate);
+		
+		LocalDate diminuirAnoLocalDate = textoData.minusYears(1);
+		System.out.println(diminuirAnoLocalDate);
+		
+		LocalDate aumentarAnoLocalDate = textoData.plusYears(1);
+		System.out.println(aumentarAnoLocalDate);
+
+		System.out.println();
+		
+		LocalDateTime diminuirDataLocalDateTime = textoDataHora.minusDays(7);
+		System.out.println(diminuirDataLocalDateTime);
+		
+		LocalDateTime aumetarDataLocalDateTime = textoDataHora.plusDays(7);
+		System.out.println(aumetarDataLocalDateTime);
+		
+		LocalDateTime diminuirHoraLocalDateTime = textoDataHora.minusHours(7);
+		System.out.println(diminuirHoraLocalDateTime);
+		
+		LocalDateTime aumetarHoraLocalDateTime = textoDataHora.plusHours(7);
+		System.out.println(aumetarHoraLocalDateTime);
+		
+		System.out.println();
+		
+		Instant diminuiDataInstant = textoDataHoraFuso.minus(7, ChronoUnit.DAYS);
+		System.out.println(diminuiDataInstant);
+		
+		
+		/* No caso de datas no format Instant, vamos utilizar a função minus ou plus, passar o tempo
+		 * que desejamos diminuir ou aumentar, seguindo da função ChronoUnit. na qual vamos informar
+		 * qual é a unidade cronológica*/
+		
+	}
+
+}

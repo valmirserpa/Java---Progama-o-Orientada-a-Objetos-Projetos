@@ -1,0 +1,17 @@
+AbstractTextEditor.Color.Background=28,31,34
+AbstractTextEditor.Color.Background.SystemDefault=false
+AbstractTextEditor.Color.FindScope=17,17,17
+AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+STS4BootMarkerIndicationColor=219,236,207
+comment_stylePreferences=NONE
+comment_text=false
+currentIPColor=42,42,42
+eclipse.preferences.version=1
+hoverReplaceMode=-1
+overviewRuler_migration=migrated_3.1
+predarkestdark.AbstractTextEditor.Color.Background.SystemDefault=false
+predarkestdark.AbstractTextEditor.Color.Foreground.SystemDefault=false
+predarkestdark.AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+predarkestdark.AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+printMarginColor=240,240,240

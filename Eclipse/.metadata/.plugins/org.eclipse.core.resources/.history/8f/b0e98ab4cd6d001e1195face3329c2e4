@@ -1,0 +1,19 @@
+package pe.estudo.springboot.estruturadedecisao;
+
+import java.util.Scanner;
+
+public class condicao {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		
+	System.out.println("Valmir");
+		
+		
+
+		scanner.close();
+
+	}
+
+}

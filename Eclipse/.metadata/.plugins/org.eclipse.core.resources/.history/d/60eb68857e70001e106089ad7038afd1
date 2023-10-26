@@ -1,0 +1,28 @@
+package entities;
+
+public class Products {
+	
+	private String name;
+	private double price;
+	private double tax;
+	
+	
+	public double somarValor(Double price) {
+		return price+=price;
+	}
+	
+	public double dobrarValor(Double price) {
+		return price*price;
+	}
+	
+	
+	public void setName(String name) {
+		this.name=name;
+	}
+	
+	public String Getname() {
+		return name;
+	}
+	
+
+}

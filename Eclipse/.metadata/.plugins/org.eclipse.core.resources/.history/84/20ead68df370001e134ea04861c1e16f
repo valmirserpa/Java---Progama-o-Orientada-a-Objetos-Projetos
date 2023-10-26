@@ -1,0 +1,40 @@
+
+
+/* Criando vetores a partir da quantidade que o usuários digitar
+ * 
+ * */
+
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class vetores {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Quantas pessoas: ");
+		int n =scanner.nextInt(); // Aqui o usuário irá digitar a quantidade que ele quer
+		
+		double[] vect =new double[n]; /*Aqui estamos criando um vetor de acordo o valor que o usuários informar
+		 								, é mesma estrutura da criação de qualquer vetor, sendo que a quantidade
+		 								será informada pela variável n*/
+		
+		/*para o preenchimento dos vetores iremos utilizar o FOR*/
+		
+		for (int i = 0; i < n; i++) { /*i<n - o laço irá se repetir até que i seja MENOR que n*/
+		 
+			vect[i]=scanner.nextDouble(); /*Então, vect na posição 0, depois volta para o for com o
+			 								i valendo 1, depois volta para o for com o i valendo 2
+			 								e por último novamente para o for com o i valendo 3*/
+			
+		}
+		
+
+		scanner.close();
+
+	}
+
+}

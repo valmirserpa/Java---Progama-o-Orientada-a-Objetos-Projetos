@@ -1,0 +1,72 @@
+package program;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		LocalDate dataLocal = LocalDate.now();
+		System.out.println("Data local: " + dataLocal);
+		
+		LocalDateTime dataeHoraLocal = LocalDateTime.now();	
+		System.out.println("Data de horário local: " +dataeHoraLocal);
+		
+		Instant dataeHoraLocalLondes = Instant.now();
+		System.out.println("Data e horário de Londres: " + dataeHoraLocalLondes);
+		
+// DATA DE HORA A PARTIR DE TEXTO	
+		LocalDate textoHora = LocalDate.parse("2023-10-24");
+		System.out.println("Data e horário a partir de um texto: " + textoHora);
+		
+		LocalDateTime textoHora1 = LocalDateTime.parse("2023-10-24T14:25:30");
+		System.out.println("Data e horário a partir de um texto: " + textoHora1);
+		
+		Instant textoHora2 = Instant.parse("2023-10-24T14:25:30Z");
+		System.out.println("Data e horário a partir de um texto: " + textoHora2);
+		
+		Instant textoHora3 = Instant.parse("2023-10-24T14:25:30-03:00");
+		System.out.println("Data e horário a partir de um texto: " + textoHora3);
+
+// FORMARTAR DATA A PARTIR DE STRING
+		
+		DateTimeFormatter formatarData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		
+		/*Primeiramente, precisamos especificar o que é dia, més e ano, ou seja
+		 * precisamos especificar um formato customizado, por isso, utilizamos o 
+		 * DateTimeFomatter, é uma classe do java que serve formatar data, para 
+		 * converter de String para objeto de data e hora
+		 * 
+		 * Documentação: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/format/DateTimeFormatter.html
+		 * 
+		 * */
+		
+		
+		LocalDate textoData = LocalDate.parse("27/11/2023", formatarData); /* o método parse irá receber como sobrecarva
+		 																	um parâmetro para informar como ele deve interpretar
+		 																	o formato de data.*/
+		System.out.println(textoData);
+		
+		
+		DateTimeFormatter formatarDataHora = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		LocalDateTime textoDataHora = LocalDateTime.parse("27/11/2023 04:50", formatarDataHora);
+		System.out.println(textoDataHora);
+		
+		//Outra forma
+		LocalDateTime textoDataHora1 = LocalDateTime.parse("27/11/2023 04:50", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+		System.out.println(textoDataHora1);
+		
+// FORMATAR DATA COM DIA, MÊS E ANO DE FORMA ISOLADA
+		
+	LocalDate dataLoca2 = LocalDate.of(2023, 10, 25);
+	System.out.println(dataLoca2);
+		
+		
+
+	}
+
+}

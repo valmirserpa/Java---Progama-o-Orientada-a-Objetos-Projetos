@@ -1,0 +1,50 @@
+package pe.estudo.springboot.estruturadedecisao;
+
+import java.util.Scanner;
+
+public class switchcase2 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Digite o número corresponde ao dia da semana:");
+		int number = scanner.nextInt();
+		String week;
+
+		switch (number) {
+
+		case 1:
+			week = "Segunda";
+			break;
+
+		case 2:
+			week = "Terça";
+			break;
+
+		case 3:
+			week = "Quarta";
+			break;
+
+		case 4:
+			week = "Quinta";
+			break;
+
+		case 5:
+			week = "Sexta";
+			break;
+
+		case 6:
+			week = "sábado";
+			break;
+
+		default:
+			week = "Domingo";
+			break;
+		}
+
+		System.out.println(week);
+
+	}
+
+}

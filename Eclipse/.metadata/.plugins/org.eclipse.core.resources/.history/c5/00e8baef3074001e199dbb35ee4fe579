@@ -1,0 +1,56 @@
+package Program;
+
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+public class Main {
+
+    public static void main(String[] args) {        
+ 
+        System.out.println("(LocalDateTime e Instant) Calcular duração de tempo utilizando datas com horas:");
+       
+        LocalDateTime textoDataHora = LocalDateTime.parse("2023-10-24T14:25:30");
+        LocalDateTime diminuirDataLocalDateTime = textoDataHora.minusDays(7);
+        LocalDateTime aumentarDataLocalDateTime = textoDataHora.plusDays(7);
+        
+        Duration duracaoEntreDatas = Duration.between(diminuirDataLocalDateTime, aumentarDataLocalDateTime);
+        System.out.println(duracaoEntreDatas.toDays());
+        System.out.println(duracaoEntreDatas.toHours());
+        System.out.println(duracaoEntreDatas.toMinutes());
+        
+        Instant textoDataHoraFuso = Instant.parse("2023-10-24T01:25:30Z");
+        Instant diminuirDataInstant = textoDataHoraFuso.minus(7, ChronoUnit.DAYS);
+        Instant aumentarDataInstant = textoDataHoraFuso.plus(7, ChronoUnit.DAYS);
+        
+        Duration duracaoEntreDatasInstant = Duration.between(diminuirDataInstant, aumentarDataInstant);
+        System.out.println(duracaoEntreDatasInstant.toDays());
+        System.out.println(duracaoEntreDatasInstant.toHours());
+        System.out.println(duracaoEntreDatasInstant.toMinutes());
+        
+        
+        /* Com LocalDateTime, para calcularmos duração entre datas com horas, precisamos utilizar a classe Duration.
+         * A classe Duration não pode ser usada para calcular a diferença entre datas completas (como LocalDate).
+         * Ela é mais adequada para calcular diferenças de tempo em termos de horas, minutos, segundos e nanossegundos. */
+        
+        System.out.println();
+        
+        System.out.println("(LocalDate) Calcular duração de tempo utilizando datas:");
+        LocalDate textoData = LocalDate.parse("2023-10-24");
+
+        LocalDate diminuirDataLocalDate = textoData.minusDays(7);
+        LocalDate aumentarDataLocalDate = textoData.plusDays(7);
+        
+        Duration duracaoEntreDatas1 = Duration.between(diminuirDataLocalDate.atStartOfDay(), aumentarDataLocalDate.atStartOfDay());
+        System.out.println(duracaoEntreDatas1.toDays());
+        System.out.println(duracaoEntreDatas1.toHours());
+        System.out.println(duracaoEntreDatas1.toMinutes());
+        
+        /*No caso de datas no formato LocalDate, sem as horas, precisamos converter para LocalDateTime 
+         * inserindo a função .atStartOfDay.*/
+        
+        
+        }
+}

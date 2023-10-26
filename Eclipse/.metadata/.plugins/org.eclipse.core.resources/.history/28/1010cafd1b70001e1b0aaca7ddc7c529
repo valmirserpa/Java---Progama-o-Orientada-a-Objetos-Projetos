@@ -1,0 +1,49 @@
+package criandoFuncao;
+import java.util.Scanner;
+
+public class FuncaoDouble {
+	
+
+	public static double calcularRaio(int valor) {
+		return valor * 3.14;
+	}
+
+	public static int dobrarValor(int valor) {
+		return valor *= valor;
+	}
+
+	public static int condicional(int valor) {
+
+		if (valor % 2 == 0) {
+			return valor * 2;
+		} else {
+			return valor * 3;
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		int valor=0;
+
+		
+		while (valor!=0) {
+			
+			System.out.println("Escreva um número:");
+			valor = scanner.nextInt();
+			
+		}
+		
+		
+
+		System.out.println(calcularRaio(valor));
+		System.out.println(dobrarValor(valor));
+		System.out.println(condicional(valor));
+
+		scanner.close();
+
+	}
+
+}
